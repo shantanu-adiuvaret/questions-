@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f4f7fc;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 50px;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #07074d;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #6a64f1;
+}
+
+.formbold-form-wrapper {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 80%;
+  background: white;
+  padding: 2rem;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1),
+    0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.question-card {
+  background-color: white;
+  border: 1px solid #dde3ec;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.question-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15),
+    0 6px 8px rgba(0, 0, 0, 0.07);
+}
+
+.question-text {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.radio-group label {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+.formbold-btn {
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 12px 25px;
+  border: none;
+  font-weight: 500;
+  background-color: #6a64f1;
+  color: white;
+  cursor: pointer;
+  margin-top: 25px;
+  width: 100%;
+}
+
+.formbold-btn:hover {
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Thank you section */
+.thank-you {
+  display: none;
+  text-align: center;
+}
+
+.thank-you .highlight {
+  color: #6a64f1;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+  .formbold-form-wrapper {
+    width: 90%;
+  }
+
+  .radio-group {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  form {
+    padding: 1.5rem;
+  }
+
+  .question-text {
+    font-size: 14px;
+  }
+
+  .formbold-btn {
+    padding: 10px 15px;
+  }
+}

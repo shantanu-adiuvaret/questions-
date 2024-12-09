@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="formbold-main-wrapper container">
+      <div class="formbold-form-wrapper">
+        <form id="submit-form">
+          <h1 class="heading"><span class="highlight">Survey</span> Questions</h1>
+
+          <!-- Question 1 Card -->
+          <div class="question-card">
+            <p class="question-text">What is your favorite color?</p>
+            <div class="radio-group">
+              <label><input type="radio" name="color" value="Red" /> Red</label>
+              <label><input type="radio" name="color" value="Blue" /> Blue</label>
+              <label><input type="radio" name="color" value="Green" /> Green</label>
+              <label><input type="radio" name="color" value="Yellow" /> Yellow</label>
+            </div>
+          </div>
+
+          <!-- Question 2 Card -->
+          <div class="question-card">
+            <p class="question-text">What is your favorite pet?</p>
+            <div class="radio-group">
+              <label><input type="radio" name="pet" value="Cat" /> Cat</label>
+              <label><input type="radio" name="pet" value="Dog" /> Dog</label>
+              <label><input type="radio" name="pet" value="Bird" /> Bird</label>
+              <label><input type="radio" name="pet" value="Fish" /> Fish</label>
+            </div>
+          </div>
+
+          <!-- Add more questions as needed -->
+          
+          <button class="formbold-btn">Submit</button>
+        </form>
+        <!-- Thank You Section -->
+        <div class="thank-you" style="display: none; text-align: center">
+          <h2 class="highlight">Thank You!</h2>
+          <p>Your form has been submitted successfully.</p>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      // Form Submission (Handling)
+      const form = document.getElementById("submit-form");
+      const thankYouSection = document.querySelector(".thank-you");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent the default form submission behavior
+
+        // Simulate form submission success
+        setTimeout(() => {
+          form.style.display = "none";
+          thankYouSection.style.display = "block";
+        }, 500);
+      });
+    </script>
+  </body>
+</html>
